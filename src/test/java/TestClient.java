@@ -56,7 +56,7 @@ public class TestClient {
 	}
 
 	private static URI getBaseURI() {
-		return UriBuilder.fromUri("http://localhost:8080/CloudServices").build();
+		return UriBuilder.fromUri("/CloudServices").build();
 	}
 
 }

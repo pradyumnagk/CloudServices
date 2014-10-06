@@ -6,7 +6,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<link type="text/css" rel="stylesheet" href="http://localhost:8080/CloudServices/assets/css/bootstrap.css"/>
+<link type="text/css" rel="stylesheet" href="/CloudServices/assets/css/bootstrap.css"/>
 </head>
 
 <body>
@@ -34,7 +34,7 @@
 					<%ArrayList<String> categories = (ArrayList<String>)request.getAttribute("catalogs"); 
 						for(String category : categories){
 					%>
-					<li><a href="http://localhost:8080/CloudServices/rest/catalog/<%=category%>" onclick="getProducts()"><%=category%></a></li>
+					<li><a href="/CloudServices/rest/catalog/<%=category%>" onclick="getProducts()"><%=category%></a></li>
 					<%} %>
 				</ul>
 			</div>
@@ -69,7 +69,7 @@ function addProdToCart(){
 	var qtyId = "#"+selectedProductid;
 	var qty= $(qtyId).val();
 	alert(selectedProductid+""+qty);
-	var URL = "http://localhost:8080/CloudServices/rest/catalog/addtocart";
+	var URL = "/CloudServices/rest/catalog/addtocart";
 	$.ajax({
 		type: "POST",
 		url: URL,
@@ -86,6 +86,6 @@ function addProdToCart(){
 }
 </script>
 <script type="text/javascript" src="http://code.jquery.com/jquery.js"></script>
-<script type="text/javascript" src="http://localhost:8080/CloudServices/assets/js/jquery.cookie.js"></script>
+<script type="text/javascript" src="/CloudServices/assets/js/jquery.cookie.js"></script>
 </body>
 </html>

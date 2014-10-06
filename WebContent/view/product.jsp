@@ -41,7 +41,7 @@
 
 <script type="text/javascript">
 function addproducttocatalog(){
-	var URL = "http://localhost:8080/CloudServices/rest/catalog/addProductToCatalog";
+	var URL = "/CloudServices/rest/catalog/addProductToCatalog";
 	alert("add product button clicked");
 	
 	$.ajax({

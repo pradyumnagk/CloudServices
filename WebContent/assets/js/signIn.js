@@ -1,6 +1,6 @@
 function LogInfun(){
 
-	var URL = "http://localhost:8080/CloudServices/rest/users/signin";
+	var URL = "/CloudServices/rest/users/signin";
 	
 	alert("signin button clicked");//+formToJSON());
 	
@@ -15,7 +15,7 @@ function LogInfun(){
 				//success: function () { //success(data); }
 			success: function(redir, textStatus, jqXHR){
 					alert("you are logged in");
-					window.location.href="http://localhost:8080/CloudServices/rest/users/home";
+					window.location.href="/CloudServices/rest/users/home";
 				},
 			error: function(textStatus, jqXHR,errorThrown){
 				alert(textStatus+" "+jqXHR);

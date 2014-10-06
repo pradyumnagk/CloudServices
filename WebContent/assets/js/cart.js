@@ -1,13 +1,13 @@
 function showCart(){
 	alert("going to cart page");
 	userId = "prad@gmail.com";
-	window.location.href="http://localhost:8080/CloudServices/rest/catalog/showcart/"+userId;
+	window.location.href="/CloudServices/rest/catalog/showcart/"+userId;
 }
 
 function deleteItem(){
 	var selectedProductid = $('input[name=product]:checked').val();
 	alert(selectedProductid);
-	var URL = "http://localhost:8080/CloudServices/rest/catalog/deleteItem";
+	var URL = "/CloudServices/rest/catalog/deleteItem";
 	$.ajax({
 		type: "POST",
 		url: URL,

@@ -7,9 +7,9 @@ import edu.sjsu.cmpe282.domain.User;
 public class UserDao {
 	Connection conn = null;
 	Statement stmt = null;
-	String url = "jdbc:mysql://localhost/test";
-	String uname = "";
-	String pwd = "";
+	String url = "jdbc:mysql://54.69.23.65/cloudserver";
+	String uname = "root";
+	String pwd = "rootroot";
 	// Constructure with JDBC connection
 	public UserDao()
 	{
@@ -29,7 +29,7 @@ public class UserDao {
 	{
 		try {
 			stmt = conn.createStatement();
-			String query = "INSERT INTO `users` (`firstname`, `lastname`, `email`, `password`) VALUES ('" + user.getFirstName() + "', '" + user.getLastName() + "', '" + user.getEmail() + "', '" + user.getPasswd() + "');";
+			String query = "INSERT INTO `User` (`firstname`, `lastname`, `email`, `password`) VALUES ('" + user.getFirstName() + "', '" + user.getLastName() + "', '" + user.getEmail() + "', '" + user.getPasswd() + "');";
 			stmt.executeUpdate(query);
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -43,7 +43,7 @@ public class UserDao {
 		String origPasswd = null;
 		try {
 			stmt = conn.createStatement();
-			String query = "Select password from users where email = '"+user.getEmail()+"';";
+			String query = "Select password from User where email = '"+user.getEmail()+"';";
 			rs = stmt.executeQuery(query);
 			rs.next();
 			origPasswd = rs.getString("password");

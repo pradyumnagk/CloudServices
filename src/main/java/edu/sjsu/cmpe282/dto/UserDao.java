@@ -7,7 +7,7 @@ import edu.sjsu.cmpe282.domain.User;
 public class UserDao {
 	Connection conn = null;
 	Statement stmt = null;
-	String url = "jdbc:mysql://54.69.23.65/cloudserver";
+	String url = "jdbc:mysql://54.69.237.160/cloudserver";
 	String uname = "root";
 	String pwd = "rootroot";
 	// Constructure with JDBC connection
@@ -56,5 +56,5 @@ public class UserDao {
 
 		return user.getPasswd().equals(origPasswd);
 	}
-
+	
 }

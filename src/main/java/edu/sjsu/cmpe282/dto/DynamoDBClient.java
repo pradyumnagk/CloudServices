@@ -42,10 +42,10 @@ public class DynamoDBClient {
 		public static void main(String[] args){
 			try{
 			DynamoDBClient dbClient = new DynamoDBClient();
-			dbClient.createProductTable();
-			dbClient.createCategoriesTable();
-			dbClient.createCartTable();
-//			dbClient.addCategories();
+//			dbClient.createProductTable();
+//			dbClient.createCategoriesTable();
+//			dbClient.createCartTable();
+			dbClient.addCategories();
 //			dbClient.addProductsToCatalog();
 //			dbClient.updateProductCatalog();
 			}catch(Exception e){
